@@ -9,3 +9,14 @@ ex: make a folder for search
 make a folder for binary search
 make a folder for the language used
 submit your file with your username in the front "yourusername_binarysearch.cc"
+
+Make sure that your code looks like this at the top:
+
+```
+/* AUTH: username https://github.com/username
+ * I am new to programming. This may be terrible. I am sorry.
+ *
+ * This is a binary search using c++. A binary search doesn't work if your array/vector is not sorted.
+ *
+*/
+```
