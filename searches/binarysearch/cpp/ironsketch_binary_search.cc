@@ -1,7 +1,6 @@
 /* AUTH: ironsketch https://github.com/ironsketch
  * I am new to programming. This may be terrible. I am sorry.
  *
- *
  * This is a binary search using c++. A binary search doesn't work if your array/vector is not sorted.
  *
 */ 
