@@ -14,9 +14,7 @@ Make sure that your code looks like this at the top:
 
 ```
 /* AUTH: username https://github.com/username
- * I am new to programming. This may be terrible. I am sorry.
- *
- * This is a binary search using c++. A binary search doesn't work if your array/vector is not sorted.
- *
+ * Description of what you are doing/attempting.
+ * Explain how it works to help others learning to program if you have time.
 */
 ```
