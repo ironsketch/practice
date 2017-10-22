@@ -18,3 +18,7 @@ Make sure that your code looks like this at the top:
  * Explain how it works to help others learning to program if you have time.
 */
 ```
+
+If someone already made a file for the same thing you wanted to in the same language.
+It's ok to make a new one! 
+Just make sure that for all your files, your name prepends the rest of the file name.
