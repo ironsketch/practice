@@ -6,19 +6,55 @@ bigArr = [834, 982, 687, 699, 452, 915, 546, 728, 869, 926, 860, 957, 294, 382, 
 m = "meow"
 arr = [0,5,60,4,24,25,14,90,35,91,8]
 hp = []
+bigHp = []
 
-def heapIt(a):
+def heapIt(a, size):
     print(a[1])
     print(str(a[2]) + " " + str(a[3]))
-    for i in range(2, int(math.floor(math.log(len(a), 2))) + 1):
+    for i in range(2, int(math.floor(math.log(size, 2))) + 1):
         for j in range(0, int(math.pow(2,i))):
-            if(not(int(math.pow(2, i)) + j >= len(a))):
+            if(not(int(math.pow(2, i)) + j >= size)):
                 print(str(a[int(math.pow(2, i)) + j]) + " ", end = '')
         print("")
 
-def heapify(a):
-    for i in range(len(a)/2, 1, -1):
-        print(m)
+def heapify(a, size, r):
+    largest = r
+    left = 2 * r
+    right = 2 * r + 1
+    if((left < size) and (a[left] > a[largest])):
+        largest = left
+    if((right < size) and (a[right] > a[largest])):
+        largest = right
 
-heapIt(arr)
-#heapIt(bigArr)
+    if largest != r:
+        tmp = a[r]
+        a[r] = a[largest]
+        a[largest] = tmp
+        heapify(a, size, largest)
+
+def heapS(a, size):
+    for i in range(size/2, 0, -1):
+        heapify(a, size, i)
+
+def heapSort(a, size, newArr):
+    for i in range(size - 1, 0, -1):
+        newArr.append(a[1])
+        tmp = a[i]
+        a[i] = a[1]
+        a[1] = tmp
+        heapify(a, i, 1)
+
+print("Before Heapify")
+heapIt(arr, len(arr))
+print("\nAfter Heapify")
+heapS(arr, len(arr))
+heapIt(arr, len(arr))
+print("\nHeapSort sorted array")
+heapSort(arr, len(arr), hp)
+print(hp)
+print("\nLarge heap is too big to print in pyramid style.")
+#heapIt(bigArr, len(bigArr))
+heapS(bigArr, len(bigArr))
+print("But here it is in order after HeapSort!")
+heapSort(bigArr, len(bigArr), bigHp)
+print(bigHp)
